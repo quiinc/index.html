@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ֆɛʋռ Qʊɨֆ</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .brand {
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 800;
+      letter-spacing: .03em;
+      line-height: 1;
+      margin: 0 0 18px;
+    }
+
+    .tagline {
+      font-size: clamp(.75rem, 1.5vw, 1rem);
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      opacity: .7;
+      margin: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      background: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
+    }
+
+    nav a, nav button {
+      color: #fff;
+      background: transparent;
+      border: 0;
+      padding: 10px 14px;
+      font: inherit;
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav a:hover, nav button:hover { opacity: .55; }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px;
+      border-top: 1px solid #181818;
+    }
+
+    .content {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      letter-spacing: .04em;
+    }
+
+    p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #bdbdbd;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .social-link {
+      display: inline-block;
+      margin-top: 28px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 7px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: .8rem;
+    }
+
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      border-top: 1px solid #181818;
+      color: #666;
+      font-size: .7rem;
+      letter-spacing: .15em;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.82);
+      padding: 20px;
+    }
+
+    .modal.show { display: flex; }
+
+    .modal-box {
+      width: min(500px, 100%);
+      background: #0b0b0b;
+      border: 1px solid #333;
+      padding: 45px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-box h3 {
+      margin: 0 0 18px;
+      font-size: .75rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .email {
+      color: #fff;
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      color: #fff;
+      background: none;
+      border: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      nav { gap: 0; padding: 12px 5px; }
+      nav a, nav button { padding: 9px 8px; font-size: .62rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#music">Music</a>
+    <a href="#about">About</a>
+    <a href="#social">Social</a>
+    <button type="button" id="contactBtn">Contact</button>
+  </nav>
+
+  <header id="home">
+    <h1 class="brand">ֆɛʋռ Qʊɨֆ</h1>
+    <p class="tagline">Artist · Entertainer · Creator</p>
+  </header>
+
+  <section id="music">
+    <div class="content">
+      <h2>Music</h2>
+      <p>
+        New music, releases, visuals and everything from the world of
+        ֆɛʋռ Qʊɨֆ.
+      </p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content">
+      <h2>About</h2>
+      <p>
+        Welcome to the official home of ֆɛʋռ Qʊɨֆ.
+      </p>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="content">
+      <h2>Social</h2>
+      <p>Follow ֆɛʋռ Qʊɨֆ on Instagram.</p>
+      <a
+        class="social-link"
+        href="https://instagram.com/sevnquis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 ֆɛʋռ Qʊɨֆ. All rights reserved.
+  </footer>
+
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-box">
+      <button class="close" id="closeBtn" aria-label="Close">&times;</button>
+      <h3 id="contactTitle">Contact</h3>
+      <a class="email" href="mailto:sevnquis@gmail.com">sevnquis@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("contactModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    contactBtn.addEventListener("click", () => {
+      modal.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        modal.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
